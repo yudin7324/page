@@ -1,0 +1,114 @@
+@import "common";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $color-blue $color-black;
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background: $color-black;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: $color-blue;
+    border-radius: 20px;
+    border: 2px solid $color-black;
+  }
+}
+
+body {     
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: $font-1;
+  background-color: $color-blue;
+  color: $color-snow;
+  font-size: 15px;
+  font-weight: 400;
+  background-origin: border-box;
+  background-image:
+    repeating-linear-gradient(45deg, $color-green 0%, $color-green 5%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 10%, rgba(98,87,147,1) 10%, rgba(98,87,147,1) 15%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 20%, rgba(213,93,100,1) 20%, rgba(213,93,100,1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 30%, rgba(228,145,41,1) 30%, rgba(228,145,41,1) 35%, rgba(0, 0, 0, 0) 35%);
+  background-size: 150% 150%;
+  background-attachment: fixed;
+}
+
+main, section {
+	display: block;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+:focus {
+  outline: none;
+} 
+
+button::-moz-focus-inner {
+  border: none;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
+input:not([type=checkbox]):not([type=radio]), textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+
+.main {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 140px;
+
+  @media (max-width: 1200px) {
+    max-width: 960px;
+    padding: 0 120px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 720px;
+    padding: 0 30px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
