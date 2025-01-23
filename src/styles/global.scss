@@ -9,23 +9,23 @@
 html {
   height: 100%;
   scroll-behavior: smooth;
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: $color-blue $color-black;
-  }
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 12px;
-  }
-  *::-webkit-scrollbar-track {
-    background: $color-black;
-  }
-  *::-webkit-scrollbar-thumb {
-    background: $color-blue;
-    border-radius: 20px;
-    border: 2px solid $color-black;
-  }
+  // /* Firefox */
+  // * {
+  //   scrollbar-width: thin;
+  //   scrollbar-color: $color-blue $color-black;
+  // }
+  // /* Chrome, Edge, and Safari */
+  // *::-webkit-scrollbar {
+  //   width: 12px;
+  // }
+  // *::-webkit-scrollbar-track {
+  //   background: $color-black;
+  // }
+  // *::-webkit-scrollbar-thumb {
+  //   background: $color-blue;
+  //   border-radius: 20px;
+  //   border: 2px solid $color-black;
+  // }
 }
 
 body {     
@@ -33,15 +33,11 @@ body {
   flex-direction: column;
   height: 100%;
   font-family: $font-1;
-  background-color: $color-blue;
-  color: $color-snow;
+  background-color: $color-black;
+  color: $color-white;
   font-size: 16px;
   font-weight: 400;
-  // background-origin: border-box;
-  // background-image:
-  //   repeating-linear-gradient(45deg, $color-green 0%, $color-green 5%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 10%, rgba(98,87,147,1) 10%, rgba(98,87,147,1) 15%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 20%, rgba(213,93,100,1) 20%, rgba(213,93,100,1) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 30%, rgba(228,145,41,1) 30%, rgba(228,145,41,1) 35%, rgba(0, 0, 0, 0) 35%);
-  // background-size: 150% 150%;
-  // background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
 }
 
 main, section {
@@ -82,12 +78,11 @@ input::-ms-clear {
 	display: none;
 }
 
-
 .main {
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // min-height: 100vh;
   }
 }
 
@@ -115,14 +110,4 @@ input::-ms-clear {
     max-width: $media-xxl;
     padding: 0 120px;
   }
-}
-
-.section {
-  height: 100vh;
-  padding: 60px 0 0 0;
-  background: linear-gradient(
-    115deg,
-    rgba(0, 0, 0, 0.8),
-    rgba(58, 58, 85, 0.7)
-  );
 }

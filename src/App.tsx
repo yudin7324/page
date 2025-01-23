@@ -1,4 +1,6 @@
+import About from "./components/About/About"
 import Header from "./components/Header/Header"
+import Hero from "./components/Hero/Hero"
 
 function App() {
 
@@ -6,19 +8,8 @@ function App() {
         <div className="main">
              <Header />
             <div className="main__wrapper">
-                <section className="hero">
-                    <div className="hero-text">
-                        <h1>Привет, я Илья!</h1>
-                        <p>Frontend Developer | React, TypeScript, CSS</p>
-                    </div>
-                    <img src="your-photo.jpg" alt="Your Photo" />
-                </section>
-
-                <section id="about" className="section">
-                    <div className="container">
-                        О себе
-                    </div>
-                </section>
+                <Hero />
+                <About />
                 <section id="skills" className="section">
                     <div className="container">
                     Навыки

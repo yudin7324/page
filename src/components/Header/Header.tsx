@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import './_header.scss'
+import './header.scss'
 
 const Header: FC = () => {
     return (
         <header className='header'>
-            <div className="container">
+          
                 <div className='header__wrap'>
                     <div className='header__logo'>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,23 +14,20 @@ const Header: FC = () => {
 
                     <ul className='header__menu'>
                         <li className='header__menu-item'>
-                            <a href="#about" className='header__menu-link'>О себе</a>
+                            <a href="#about" className='header__menu-link'>About Me</a>
                         </li>
                         <li className='header__menu-item'>
-                            <a href="#skills" className='header__menu-link'>Навыки</a>
+                            <a href="#skills" className='header__menu-link'>Skills</a>
                         </li>
                         <li className='header__menu-item'>
-                            <a href="#experience" className='header__menu-link'>Опыт</a>
+                            <a href="#projects" className='header__menu-link'>Portfolio</a>
                         </li>
                         <li className='header__menu-item'>
-                            <a href="#projects" className='header__menu-link'>Проекты</a>
-                        </li>
-                        <li className='header__menu-item'>
-                            <a href="#contact" className='header__menu-link'>Контакты</a>
+                            <a href="#contact" className='header__menu-link'>Contacts</a>
                         </li>
                     </ul>
                 </div>
-            </div>
+            
         </header>
     )
 }

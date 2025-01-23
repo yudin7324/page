@@ -1,0 +1,32 @@
+.hero {
+  height: 100svh;
+  padding-top: 60px;
+  background-image: url(../../images/bg-1.jpg);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid $color-main-green;
+
+  .container {
+    height: 100%;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 2em;
+    color: $color-yellow;
+    font-weight: 300;
+  }
+  
+  &__subtitle {
+    font-family: $font-2;
+    font-size: 3em;
+  }
+}

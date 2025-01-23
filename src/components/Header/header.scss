@@ -1,15 +1,18 @@
 .header {
-  background: $color-main-blue;
+  background: $color-black;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 9999;
+  border-bottom: 2px solid $color-yellow;
 
   &__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 60px;
+    padding: 0 60px;
   }
 
   &__menu {
@@ -22,13 +25,13 @@
     }
 
     &-link {
-      color: $color-snow;
+      color: $color-white;
       text-decoration: none;
       padding: 5px 10px;
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: $color-main-green;
+        color: $color-yellow;
       }
     }
   }
