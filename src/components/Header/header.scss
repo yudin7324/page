@@ -1,24 +1,28 @@
 .header {
-  background: $color-black;
+  // background: rgba(255, 255, 255, 0); /* полупрозрачный фон */
+  backdrop-filter: blur(10px); /* размытие фона за элементом */
+  -webkit-backdrop-filter: blur(10px); 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-  border-bottom: 2px solid $color-yellow;
+  // border-bottom: 1px solid $color-white;
 
   &__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
-    padding: 0 60px;
+    height: 80px;
   }
 
   &__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
+
+    &-list {
+      display: flex;
+      align-items: center;
+      list-style: none;  
+    }
 
     &-item {
 
@@ -32,6 +36,30 @@
 
       &:hover {
         color: $color-yellow;
+        // filter: drop-shadow(0 0 1em $color-yellow);
+      }
+    }
+  }
+
+  &__socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-link {
+      color: $color-white;
+
+      &:hover {
+        svg {
+          fill: $color-yellow;
+        }
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: all 0.3s ease-in-out;
       }
     }
   }

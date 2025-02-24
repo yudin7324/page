@@ -4,7 +4,10 @@
   padding-top: 60px;
 
   &__wrap {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
   }
 
   &__photo {

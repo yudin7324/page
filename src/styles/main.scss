@@ -90,6 +90,7 @@ input::-ms-clear {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  height: 100%;
 
   @media (min-width: $media-md) {
     max-width: $media-md;
@@ -109,5 +110,31 @@ input::-ms-clear {
   @media (min-width: $media-xxl) {
     max-width: $media-xxl;
     padding: 0 120px;
+  }
+}
+
+.btn {
+  display: block;
+  color: $color-white;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid $color-yellow;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-black;
+    background-color: $color-yellow;
+    // filter: drop-shadow(0 0 2.5em $color-yellow);
+  }
+
+  &.btn--secondary {
+    color: $color-black;
+    background-color: $color-yellow;
+
+    &:hover {
+      color: $color-black;
+      // filter: drop-shadow(0 0 2.5em $color-yellow);
+    }
   }
 }

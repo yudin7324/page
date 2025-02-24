@@ -1,27 +1,28 @@
 import About from "./components/About/About"
+import Contacts from "./components/Contancts/Contacts"
 import Header from "./components/Header/Header"
 import Hero from "./components/Hero/Hero"
+import Skills from "./components/Skills/Skills"
+import Projects from "./components/Projects/Projects"
+import Footer from "./components/Footer/Footer"
 
 function App() {
 
-    return (
-        <div className="main">
-             <Header />
-            <div className="main__wrapper">
-                <Hero />
-                <About />
-                <section id="skills" className="section">
-                    <div className="container">
-                    Навыки
-                    </div>
-                </section>
-                <section id="experience" className="section">Опыт</section>
-                <section id="projects" className="section">Проекты</section>
-                <section id="contact" className="section">Контакты</section>
-                <footer>footer</footer>
-            </div>
-        </div>
-    )
+  return (
+    <main className="main">
+      <Header />
+
+      <div className="main__wrapper">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contacts />
+      </div>
+
+      <Footer />
+    </main>
+  )
 }
 
 export default App
