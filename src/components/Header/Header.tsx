@@ -27,22 +27,24 @@ function Header() {
             </ul>
             
             <nav className='header__menu'>
-                <ul className='header__menu-list'>
-                    <li className='header__menu-item'>
-                        <a href="#about" className='header__menu-link'>About Me</a>
-                    </li>
-                    <li className='header__menu-item'>
-                        <a href="#skills" className='header__menu-link'>Skills</a>
-                    </li>
-                    <li className='header__menu-item'>
-                        <a href="#projects" className='header__menu-link'>Portfolio</a>
-                    </li>
-                    <li className='header__menu-item'>
-                        <a href="#contacts" className='header__menu-link'>Contacts</a>
-                    </li>
-                </ul>
+              <ul className='header__menu-list'>
+                <li className='header__menu-item'>
+                  <a href="#home" className='header__menu-link'>Home</a>
+                </li>
+                <li className='header__menu-item'>
+                  <a href="#about" className='header__menu-link'>About Me</a>
+                </li>
+                <li className='header__menu-item'>
+                  <a href="#skills" className='header__menu-link'>Skills</a>
+                </li>
+                <li className='header__menu-item'>
+                  <a href="#projects" className='header__menu-link'>Projects</a>
+                </li>
+                <li className='header__menu-item'>
+                  <a href="#contacts" className='header__menu-link'>Contacts</a>
+                </li>
+              </ul>
             </nav>
-            
         </div>
       </div>
       </motion.section>

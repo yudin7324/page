@@ -5,7 +5,7 @@ function Projects() {
     <section id="projects" className="projects">
       <div className="container">
         <div className="projects__wrap">
-          Works
+          <div className='projects__title'>Portfolio</div>
         </div>
       </div>
     </section>

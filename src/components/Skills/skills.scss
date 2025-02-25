@@ -1,3 +1,36 @@
 .skills {
-  height: 100svh;
+  position: relative;
+  height: calc(100vh - 80px);
+  height: calc(100svh - 80px);
+  padding-top: 60px;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  &__item {
+    &:not(&:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 }

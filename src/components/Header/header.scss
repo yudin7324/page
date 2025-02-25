@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   z-index: 9999;
-  // border-bottom: 1px solid $color-white;
+  border-bottom: 1px solid var(--color-primary);
 
   &__wrap {
     display: flex;
@@ -29,13 +29,13 @@
     }
 
     &-link {
-      color: $color-white;
+      color: var(--color-white);
       text-decoration: none;
       padding: 5px 10px;
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: $color-yellow;
+        color: var(--color-primary);
         // filter: drop-shadow(0 0 1em $color-yellow);
       }
     }
@@ -48,11 +48,11 @@
     gap: 1rem;
 
     &-link {
-      color: $color-white;
+      color: var(--color-white);
 
       &:hover {
         svg {
-          fill: $color-yellow;
+          fill: var(--color-primary);
         }
       }
 

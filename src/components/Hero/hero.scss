@@ -1,13 +1,14 @@
 .hero {
   height: 100svh;
   // padding-top: 60px;
-  // border-bottom: 1px solid $color-yellow;
+  // border-bottom: 1px solid var(--color-primary);
 
   .container {
     height: 100%;
   }
 
   &__wrap {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +19,7 @@
 
   &__title {
     font-size: 5em;
-    color: $color-yellow;
+    color: var(--color-primary);
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
@@ -41,7 +42,7 @@
     
     span {
       // font-weight: 300;
-      color: $color-yellow;
+      color: var(--color-primary);
     }
   }
 
@@ -49,5 +50,17 @@
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+  }
+
+  .color {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    border-radius: 50%;
+    cursor: pointer;
+    // background-color: var(--color-main-green);
   }
 }
