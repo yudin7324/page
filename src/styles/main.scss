@@ -161,23 +161,14 @@ input::-ms-clear {
   --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
 }
 
-body {
-  // min-height: 100vh;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // background: var(--bg);
-}
-
 .toggle-scene {
-  // overflow: visible !important; // !important for CodePen
   height: 50vmin;
   position: absolute;
   right: 0;
 
   &__cord {
     stroke: var(--cord);
-    cursor: move;
+   
 
     &:nth-of-type(1) {
       display: none;
@@ -194,6 +185,10 @@ body {
       stroke: var(--cord);
       fill: var(--cord);
     }
+  }
+
+  &__hit-spot {
+    cursor: grab;
   }
 }
 

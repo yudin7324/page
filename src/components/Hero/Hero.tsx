@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import './hero.scss';
-import IconBulb from '../Icons/IconBulb';
+import ToggleBulb from '../ToggleBulb/ToggleBulb';
 
 
 function Hero() {
@@ -27,7 +27,7 @@ function Hero() {
           </div>
 
           <div className='color'></div>
-          <IconBulb />
+          <ToggleBulb />
         </div>
       </div>
     </motion.section>
