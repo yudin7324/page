@@ -8,15 +8,14 @@ function ToggleBulb () {
     setLight(prevLight => !prevLight);
   }
 
-  useEffect(() => {
-    // Обновляем глобальную переменную CSS --on в зависимости от состояния light
-    document.documentElement.style.setProperty('--on', light ? '1' : '0');
-    document.documentElement.style.setProperty('--color-background', light ? 'hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%))' : 'hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%))');
+  // useEffect(() => {
+  //   document.documentElement.style.setProperty('--on', light ? '1' : '0');
+  //   document.documentElement.style.setProperty('--color-background', light ? 'hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%))' : 'var(--color-black)');
 
-    document.documentElement.style.setProperty('--color-font', light ? 'var(--color-black)' : '#FFFFFF');
+  //   document.documentElement.style.setProperty('--color-font', light ? 'var(--color-black)' : '#FFFFFF');
 
-    document.documentElement.style.setProperty('--color-primary', light ? 'var(--color-black)' : 'var(--color-yellow)');
-  }, [light]); // Эффект срабатывает при изменении light
+  //   document.documentElement.style.setProperty('--color-primary', light ? 'var(--color-black)' : 'var(--color-yellow)');
+  // }, [light]);
 
   return (
     <svg className="toggle-scene" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" viewBox="0 0 197.451 481.081">

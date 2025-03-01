@@ -5,7 +5,8 @@ function About() {
     <section id="about" className="about">
         <div className="container">
             <div className="about__wrap">
-                <div className="about__title">About me</div>
+                <div className="about__title title">About me</div>
+
                 <p className="about__text">Hi! My name is Ilya, and I’m a frontend developer with over 4 years of experience in web development. I specialize in building interactive user interfaces using React, TypeScript, and JavaScript.</p>
                 <p className="about__text">My goal is to create fast, user-friendly, and visually appealing web applications that help people solve their problems. I focus on clean code, intuitive UI/UX, and performance optimization.</p>
                 <p className="about__text">Currently, I am:</p>

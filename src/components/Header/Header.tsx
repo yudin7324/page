@@ -32,7 +32,7 @@ function Header() {
                   <a href="#home" className='header__menu-link'>Home</a>
                 </li>
                 <li className='header__menu-item'>
-                  <a href="#about" className='header__menu-link'>About Me</a>
+                  <a href="#about" className='header__menu-link'>About</a>
                 </li>
                 <li className='header__menu-item'>
                   <a href="#skills" className='header__menu-link'>Skills</a>

@@ -5,7 +5,7 @@ function Skills() {
     <div id="skills" className="skills">
       <div className="container">
         <div className="skills__wrap">
-          <div className="skills__title">Skills</div>
+          <div className="skills__title title">Skills</div>
           <p className="skills__text">🖥️ Frontend Development</p>
           <ul className="skills__list">
             <li className="skills__item">Languages: JavaScript (ES6+), TypeScript</li>

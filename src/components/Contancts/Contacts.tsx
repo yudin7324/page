@@ -8,7 +8,7 @@ function Contacts() {
     <section id="contacts" className="contacts">
       <div className="container">
         <div className="contacts__wrap">
-        <div className="contacts__title">Contacts</div>
+        <div className="contacts__title title">Contacts</div>
 
         <p className="contacts__text">Got a question, project idea, or just want to chat about code? Feel free to drop me an email! Whether it’s collaboration, feedback, or just sharing ideas, I’d love to hear from you. Let’s connect!</p>
 

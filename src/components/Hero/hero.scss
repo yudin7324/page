@@ -18,38 +18,34 @@
   }
 
   &__title {
-    font-size: 5em;
-    color: var(--color-primary);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 1rem;
+    // font-size: 5em;
+    // color: var(--color-primary);
+    // font-weight: 700;
+    // text-transform: uppercase;
+    // line-height: 1;
+    // margin-bottom: 1rem;
   }
   
   &__subtitle {
     font-family: $font-2;
-    font-size: 1.5em;
-    // font-weight: 200;
-    // text-transform: uppercase;
+    color: var(--color-secondary);
   }
 
   &__text {
-    font-size: 1.2em;
-    // font-weight: 200;
     text-align: left;
     width: 50%;
-    line-height: 1.5;
+    color: var(--color-gray);
     
     span {
       // font-weight: 300;
-      color: var(--color-primary);
+      
     }
   }
 
   &__btns {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 16px;
   }
 
   .color {

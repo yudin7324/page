@@ -3,16 +3,29 @@
 :root {
   --color-black: #15151a;
   --color-white: #FFFFFF;
-  --color-gray: #4E4E50;
+  --color-gray: #6c757d;
   --color-yellow: #ffd166;
   --color-main-green: #15a097;
   --color-main-blue: #45567d;
 
 
-  --color-primary: var(--color-yellow);
-  --color-background: var(--color-black);
-  --color-font: var(--color-white);
+  --color-test-primary: #15a097;
+  --color-test-secondary: #001219;
+  --color-test-bg: #FFFFFF;
+  --color-test-font: #001219;
+
+
+  --color-primary: var(--color-test-primary);
+  --color-secondary: var(--color-test-secondary);
+  --color-background: var(--color-test-bg);
+  --color-font: var(--color-test-font);
 }
+
+*::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -20,23 +33,22 @@
   margin: 0;
 }
 
-
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) var(--color-black);
+  scrollbar-color: var(--color-primary) var(--color-background);
 }
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 12px;
 }
 *::-webkit-scrollbar-track {
-  background: var(--color-black);
+  background: var(--color-background);
 }
 *::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: 20px;
-  border: 2px solid var(--color-black);
+  border: 2px solid var(--color-background);
 }
 
 html {
@@ -52,6 +64,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-font);
   font-size: 16px;
+  line-height: 1.5;
   font-weight: 400;
   -webkit-tap-highlight-color: transparent;
 }
@@ -94,6 +107,49 @@ input::-ms-clear {
 	display: none;
 }
 
+
+h1, .h1 {
+  font-size: 48px;
+}
+
+h2, .h2 {
+  font-size: 32px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+}
+
+h4, .h4 {
+  font-size: 20px;
+}
+
+h5, .h5 {
+  font-size: 18px;
+}
+
+h6, .h6 {
+  font-size: 16px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 32px;
+  color: var(--color-gray);
+  margin-bottom: 15px;
+  
+
+  &::before {
+    content: "//";
+  }
+}
+
+.small-text {
+  font-size: 14px;
+}
+
 .main {
 
 }
@@ -127,16 +183,19 @@ input::-ms-clear {
 
 .btn {
   display: block;
-  color: var(--color-white);
-  padding: 10px 20px;
+  color: var(--color-font);
+  padding: 10px 15px;
+  // font-weight: 700;
   background-color: transparent;
-  border: 1px solid var(--color-primary);
+  border: 2px solid var(--color-font);
+  border-radius: 20px 0 20px 20px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  font-size: 16px;
 
   &:hover {
-    color: var(--color-black);
-    background-color: var(--color-primary);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
     // filter: drop-shadow(0 0 2.5em $color-yellow);
   }
 
@@ -162,13 +221,12 @@ input::-ms-clear {
 }
 
 .toggle-scene {
-  height: 50vmin;
+  height: 250px;
   position: absolute;
-  right: 0;
+  right: 200px;
 
   &__cord {
     stroke: var(--cord);
-   
 
     &:nth-of-type(1) {
       display: none;
