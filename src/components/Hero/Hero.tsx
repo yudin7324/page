@@ -1,37 +1,30 @@
-import { motion } from 'framer-motion';
-import './hero.scss';
-import ToggleBulb from '../ToggleBulb/ToggleBulb';
+import { FC } from "react";
+import "./hero.scss";
 
-
-function Hero() {
+const Hero:FC = () => {
   return (
-    <motion.section 
-      className='hero'
-      id="home"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1}}
-      transition={{ duration: 0.3, ease: "easeOut" }}
-    >
+    <div className="hero" id="home">
       <div className="container">
         <div className="hero__wrap">
-          <p className='hero__subtitle h2'>Hi, my name is </p>
           <h1 className="hero__title h1">
-            Ilya Yudin
+            I am Ilya – a frontend developer passionate about creating interactive and user-friendly web interfaces.
           </h1>
-          <p className='hero__subtitle h3'>I'm a frontend developer</p>
-          <p className='hero__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta molestias obcaecati placeat ratione, quam at deleniti sed magnam praesentium natus!</p>
-          <div 
-            className="hero__btns"
-          >
-            <a href="#" className="btn">View my work</a>
-            <a href="#" className="btn">Resume</a>
-          </div>
-
-          <div className='color'></div>
-          {/* <ToggleBulb /> */}
         </div>
       </div>
-    </motion.section>
+      <div className="hero__decoration">
+        <div className="container">
+          <div className="hero__decoration-wrap">
+            <div>
+            <div className="hero__btns">
+              <a href="#projects" className="btn">View my work</a>
+              <a href="#" className="btn">Resume</a>
+            </div>
+            </div>
+            <p className="hero__text main-text">Welcome to my portfolio. I enjoy working on various projects and am always open to new opportunities. Feel free to explore my work and reach out if you’d like to connect.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

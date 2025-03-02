@@ -11,12 +11,19 @@
     height: 100%;
   }
 
-  &__title {
-
-  }
-
   &__text {
     font-size: 1.2em;
     line-height: 1.5;
+  }
+
+  &__cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  &__card {
+    
   }
 }

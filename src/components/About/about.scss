@@ -1,8 +1,5 @@
 .about {
-  position: relative;
-  height: calc(100vh - 80px);
-  height: calc(100svh - 80px);
-  padding-top: 60px;
+  padding: 80px 0;
 
   &__wrap {
     display: flex;
@@ -11,16 +8,47 @@
     height: 100%;
   }
 
-  &__title {
-    // font-size: 3em;
-    // font-weight: 700;
-    // color: var(--color-primary);
-    margin-bottom: 30px;
+  &__text {
+    font-style: italic;
+    width: 60%;
+
+    span {
+      color: var(--color-primary);
+    }
   }
 
-  &__text {
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin-top: 20px;
+  &__improving {
+    text-align: left;
+    align-self: flex-end;
+    padding: 24px;
+    margin: 24px 0 44px 0;
+    border-radius: 20px 20px 0 20px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transition: all 0.1s ease-in-out;
+    -webkit-box-shadow: 0px 3px 45px 4px rgba(0, 18, 25, 0.2);
+    -moz-box-shadow: 0px 3px 45px 4px rgba(0, 18, 25, 0.2);
+    box-shadow: 0px 3px 45px 4px rgba(0, 18, 25, 0.2);
+
+    &-text {
+      font-style: italic;
+      
+      &.main-text {
+        line-height: 1;
+      }
+    }
+
+    // &:hover {
+    //   background-color: var(--color-secondary);
+    // }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+    margin-top: 18px;
+    letter-spacing: 1.2px;
   }
 }

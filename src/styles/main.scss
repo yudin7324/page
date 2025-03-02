@@ -1,24 +1,25 @@
 @import "common";
 
 :root {
-  --color-black: #15151a;
+  --color-black: #001219;
   --color-white: #FFFFFF;
   --color-gray: #6c757d;
   --color-yellow: #ffd166;
-  --color-main-green: #15a097;
+  --color-main-green: #177e89;
   --color-main-blue: #45567d;
 
+  --color-secondary: var(--color-main-green);
 
-  --color-test-primary: #15a097;
-  --color-test-secondary: #001219;
-  --color-test-bg: #FFFFFF;
-  --color-test-font: #001219;
+  --color-primary: var(  --color-main-green);
+  --color-background: var(--color-white);
+  --color-font: var(--color-black);
 
 
-  --color-primary: var(--color-test-primary);
-  --color-secondary: var(--color-test-secondary);
-  --color-background: var(--color-test-bg);
-  --color-font: var(--color-test-font);
+  --container-padding-xs: 16px;
+  --container-padding-md: 24px;
+  --container-padding-lg: 32px;
+  --container-padding-xl: 40px;
+  --container-padding-xxl: 96px;
 }
 
 *::selection {
@@ -33,18 +34,19 @@
   margin: 0;
 }
 
-/* Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-background);
 }
-/* Chrome, Edge, and Safari */
+
 *::-webkit-scrollbar {
   width: 12px;
 }
+
 *::-webkit-scrollbar-track {
   background: var(--color-background);
 }
+
 *::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: 20px;
@@ -64,7 +66,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-font);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
   -webkit-tap-highlight-color: transparent;
 }
@@ -109,7 +111,18 @@ input::-ms-clear {
 
 
 h1, .h1 {
-  font-size: 48px;
+  font-size: 32px;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+
+  @media (min-width: $media-md) {
+    font-size: 38px;
+  }
+
+  @media (min-width: $media-xl) {
+    font-size: 48px;
+  }
+
 }
 
 h2, .h2 {
@@ -122,28 +135,12 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 20px;
+  line-height: 1.2;
 }
 
-h5, .h5 {
+.main-text {
   font-size: 18px;
-}
-
-h6, .h6 {
-  font-size: 16px;
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 32px;
-  color: var(--color-gray);
-  margin-bottom: 15px;
-  
-
-  &::before {
-    content: "//";
-  }
+  line-height: 1.8;
 }
 
 .small-text {
@@ -157,46 +154,44 @@ h6, .h6 {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
-  height: 100%;
+  padding: 0 $container-padding-xs;
 
   @media (min-width: $media-md) {
     max-width: $media-md;
-    padding: 0 30px;
+    padding: 0 $container-padding-md;
   }
 
   @media (min-width: $media-lg) {
     max-width: $media-lg;
-    padding: 0 30px;
+    padding: 0 $container-padding-lg;
   }
 
   @media (min-width: $media-xl) {
     max-width: $media-xl;
-    padding: 0 30px;
+    padding: 0 $container-padding-xl;
   }
 
   @media (min-width: $media-xxl) {
     max-width: $media-xxl;
-    padding: 0 120px;
+    padding: 0 $container-padding-xxl;
   }
 }
 
 .btn {
   display: block;
-  color: var(--color-font);
-  padding: 10px 15px;
-  // font-weight: 700;
+  color: var(--color-white);
+  padding: 14px 27px;
   background-color: transparent;
-  border: 2px solid var(--color-font);
+  border: 2px solid var(--color-white);
   border-radius: 20px 0 20px 20px;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
-  font-size: 16px;
 
   &:hover {
     color: var(--color-primary);
-    border-color: var(--color-primary);
-    // filter: drop-shadow(0 0 2.5em $color-yellow);
+    // border-color: var(--color-primary);
+    background-color: var(--color-white);
+    // filter: drop-shadow(0 0 2.5em var(--color-white));
   }
 
   &.btn--secondary {
@@ -210,80 +205,16 @@ h6, .h6 {
   }
 }
 
-:root {
-  --on: 0;
-  --bg: hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%));
-  --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-  --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-  --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
-  --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
-  --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
+.line {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color-primary);
+  margin: 0 auto;
 }
 
-.toggle-scene {
-  height: 250px;
-  position: absolute;
-  right: 200px;
-
-  &__cord {
-    stroke: var(--cord);
-
-    &:nth-of-type(1) {
-      display: none;
-    }
-
-    &:nth-of-type(2),
-    &:nth-of-type(3),
-    &:nth-of-type(4),
-    &:nth-of-type(5) {
-      display: none;
-    }
-
-    &-end {
-      stroke: var(--cord);
-      fill: var(--cord);
-    }
-  }
-
-  &__hit-spot {
-    cursor: grab;
-  }
-}
-
-.toggle-scene__dummy-cord {
-  stroke-width: 6;
-  stroke: var(--cord);
-}
-
-.bulb {
-
-  &__filament {
-    stroke: var(--filament);
-  }
-
-  &__shine {
-    stroke: var(--shine);
-  }
-
-  &__flash {
-    stroke: hsl(45, 80%, 80%);
-    display: none;
-  }
-
-  &__bulb {
-    stroke: var(--stroke);
-    fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
-  }
-
-  &__cap {
-    fill: var(--cap);
-
-    &-shine {
-      fill: var(--shine);
-    }
-
-    &-outline {
-      stroke: var(--stroke);
-    }
-  }
+.mark {
+  padding: 5px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-style: italic;
 }

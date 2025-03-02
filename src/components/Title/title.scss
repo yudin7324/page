@@ -1,0 +1,12 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-gray);
+  margin-bottom: 32px;
+  font-style: italic;
+
+  &::before {
+    content: "//";
+  }
+}
